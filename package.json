@@ -1,0 +1,54 @@
+{
+  "name": "variabledelimiter",
+  "displayName": "Variable Delimiter",
+  "description": "add symbol for variable printing",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.94.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./extension.js",
+  "contributes": {
+    "configuration": {
+      "title": "Variable Delimiter Settings",
+      "properties": {
+          "Variable Delimiter.symbol repeat times": {
+            "type": "number",
+            "default": 50,
+            "description": "Repeat times of the symbol."
+          },
+          "Variable Delimiter.symbol": {
+            "type": "string",
+            "default": "=",
+            "description": "Symbol to repeat."
+          }
+      }
+    },
+    "commands": [{
+      "command": "Variable Delimiter.surrounding by symbol",
+      "title": "Surrounding By Symbol"
+    }],
+    "keybindings": [{
+      "command": "Variable Delimiter.surrounding by symbol",
+      "key": "ctrl+alt+=",
+      "mac": "cmd+alt+=",
+      "when": "editorTextFocus"
+    }]
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.94.0",
+    "@types/mocha": "^10.0.9",
+    "@types/node": "20.x",
+    "eslint": "^9.13.0",
+    "@vscode/test-cli": "^0.0.10",
+    "@vscode/test-electron": "^2.4.1"
+  }
+}
