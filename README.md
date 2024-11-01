@@ -2,7 +2,7 @@
 
 **Variable Delimiter** is a VSCode extension that helps you add customizable symbols as delimiters above and below selected text in your editor, making it easier to highlight or separate important variables or code snippets.
 
-![Alt Text](variable_delimiter_demo.gif | width=316)
+<img src="variable_delimiter_demo.gif" width="316">
 
 ## Features
 
